@@ -1,6 +1,6 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-import { App, Layout } from './components/containers';
+import React from "react";
+import { Route, IndexRoute } from "react-router";
+import { App, Layout } from "./components/containers";
 import {
   SignIn,
   SignUp,
@@ -12,8 +12,8 @@ import {
   TimezoneEdit,
   Users,
   UserNew,
-  UserEdit,
-} from './components/pages';
+  UserEdit
+} from "./components/pages";
 
 const routes = (
   <Route path="/" component={App}>

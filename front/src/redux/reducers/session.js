@@ -1,8 +1,8 @@
-import * as cx from 'redux/actions/constants';
+import * as cx from "redux/actions/constants";
 
 const initialState = {
   data: {},
-  headers: {},
+  headers: {}
 };
 
 export default (state = initialState, action) => {
@@ -10,21 +10,21 @@ export default (state = initialState, action) => {
     case cx.SIGNUP: {
       const newState = Object.assign({}, state, {
         data: action.payload.user.data.data,
-        headers: action.payload.user.headers,
+        headers: action.payload.user.headers
       });
-      localStorage.setItem('tmz_session', JSON.stringify(newState));
+      localStorage.setItem("tmz_session", JSON.stringify(newState));
       return newState;
     }
     case cx.LOGIN: {
       const newState = Object.assign({}, state, {
         data: action.payload.user.data.data,
-        headers: action.payload.user.headers,
+        headers: action.payload.user.headers
       });
-      localStorage.setItem('tmz_session', JSON.stringify(newState));
+      localStorage.setItem("tmz_session", JSON.stringify(newState));
       return newState;
     }
     case cx.LOGOUT: {
-      localStorage.removeItem('tmz_session');
+      localStorage.removeItem("tmz_session");
       return Object.assign({}, state, initialState);
     }
     default:
